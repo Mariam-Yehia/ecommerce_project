@@ -113,108 +113,108 @@ const EcommerceHomepage = () => {
         <div className="container mx-auto px-4 py-3">
           {/* Top Header */}
           <motion.div 
-  className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 space-y-3 md:space-y-0"
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.3 }}
->
-  {/* Logo and Mobile Menu Button */}
-  <div className="flex items-center justify-between w-full md:w-auto">
-    <button 
-      className="md:hidden p-2 mr-2"
-      onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-      aria-label="Toggle menu"
-    >
-      {mobileMenuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
-    </button>
-    <motion.div 
-      className="text-2xl font-bold text-indigo-600"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      ShopNest
-    </motion.div>
-    
-    {/* Mobile Icons - Smaller size */}
-    <div className="flex items-center space-x-3 md:hidden">
-      <motion.button 
-        className="p-1.5 relative"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <FiHeart className="text-lg" />
-        {wishlist.length > 0 && (
-          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full h-3.5 w-3.5 flex items-center justify-center">
-            {wishlist.length}
-          </span>
-        )}
-      </motion.button>
-      <motion.button 
-        className="p-1.5 relative"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <FiUser className="text-lg" />
-      </motion.button>
-      <motion.button 
-        className="p-1.5 relative"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <FiShoppingCart className="text-lg" />
-        <span className="absolute -top-1 -right-1 bg-indigo-500 text-white text-[10px] rounded-full h-3.5 w-3.5 flex items-center justify-center">3</span>
-      </motion.button>
-    </div>
-  </div>
-
-  {/* Search Bar - Hidden on mobile */}
-  <motion.div 
-    className="hidden md:flex flex-1 mx-0 md:mx-6 w-full md:w-auto"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 0.2 }}
-  >
-    <div className="relative w-full max-w-xl">
-      <input
-        type="text"
-        placeholder="Search products..."
-        className="w-full pl-4 pr-10 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
-      />
-      <FiSearch className="absolute right-3 top-3 text-gray-400" />
-    </div>
-  </motion.div>
-
-  {/* Desktop Icons - Normal size */}
-  <div className="hidden md:flex items-center justify-end space-x-4 w-full md:w-auto">
-    <motion.button 
-      className="p-2 relative"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-    >
-      <FiHeart className="text-xl" />
-      {wishlist.length > 0 && (
-        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-          {wishlist.length}
-        </span>
-      )}
-    </motion.button>
-    <motion.button 
-      className="p-2 relative"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-    >
-      <FiUser className="text-xl" />
-    </motion.button>
-    <motion.button 
-      className="p-2 relative"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-    >
-      <FiShoppingCart className="text-xl" />
-      <span className="absolute -top-1 -right-1 bg-indigo-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">3</span>
-    </motion.button>
-  </div>
-</motion.div>
+            className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 space-y-3 md:space-y-0"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Logo and Mobile Menu Button */}
+            <div className="flex items-center justify-between w-full md:w-auto">
+              <button 
+                className="md:hidden p-2 mr-2"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
+              </button>
+              <motion.div 
+                className="text-2xl font-bold text-indigo-600"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                ShopNest
+              </motion.div>
+              
+              {/* Mobile Icons - Smaller size */}
+              <div className="flex items-center space-x-3 md:hidden">
+                <motion.button 
+                  className="p-1.5 relative"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FiHeart className="text-lg" />
+                  {wishlist.length > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full h-3.5 w-3.5 flex items-center justify-center">
+                      {wishlist.length}
+                    </span>
+                  )}
+                </motion.button>
+                <motion.button 
+                  className="p-1.5 relative"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FiUser className="text-lg" />
+                </motion.button>
+                <motion.button 
+                  className="p-1.5 relative"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FiShoppingCart className="text-lg" />
+                  <span className="absolute -top-1 -right-1 bg-indigo-500 text-white text-[10px] rounded-full h-3.5 w-3.5 flex items-center justify-center">3</span>
+                </motion.button>
+              </div>
+            </div>
+          
+            {/* Search Bar - Hidden on mobile */}
+            <motion.div 
+              className="hidden md:flex flex-1 mx-0 md:mx-6 w-full md:w-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="relative w-full max-w-xl">
+                <input
+                  type="text"
+                  placeholder="Search products..."
+                  className="w-full pl-4 pr-10 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
+                />
+                <FiSearch className="absolute right-3 top-3 text-gray-400" />
+              </div>
+            </motion.div>
+          
+            {/* Desktop Icons - Normal size */}
+            <div className="hidden md:flex items-center justify-end space-x-4 w-full md:w-auto">
+              <motion.button 
+                className="p-2 relative"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FiHeart className="text-xl" />
+                {wishlist.length > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                    {wishlist.length}
+                  </span>
+                )}
+              </motion.button>
+              <motion.button 
+                className="p-2 relative"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FiUser className="text-xl" />
+              </motion.button>
+              <motion.button 
+                className="p-2 relative"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FiShoppingCart className="text-xl" />
+                <span className="absolute -top-1 -right-1 bg-indigo-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">3</span>
+              </motion.button>
+            </div>
+          </motion.div>
           
           {/* Mobile Search - Visible only on mobile */}
           <motion.div 
@@ -234,114 +234,113 @@ const EcommerceHomepage = () => {
           </motion.div>
           
           {/* Country Selector and Categories */}
-<div className="flex items-center justify-between">
-  {/* Language and Currency Selector */}
-  <div className="relative">
-    <motion.button 
-      className="flex items-center space-x-1 text-sm"
-      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <FiGlobe className="text-gray-600" />
-      <span>{selectedLanguage} | {selectedCurrency}</span>
-      <motion.span
-        animate={{ rotate: isDropdownOpen ? 180 : 0 }}
-        transition={{ duration: 0.2 }}
-      >
-        <FiChevronDown className="text-gray-500" />
-      </motion.span>
-    </motion.button>
-    
-    <AnimatePresence>
-      {isDropdownOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.2 }}
-          className="absolute bg-white shadow-lg rounded-md mt-1 py-1 w-64 z-20 max-h-96 overflow-y-auto"
-        >
-          <div className="border-b border-gray-100 px-4 py-2">
-            <h5 className="text-xs font-bold text-gray-500 uppercase">Language</h5>
-            {['English', 'Spanish', 'French', 'German', 'Chinese', 'Japanese', 'Arabic', 'Russian'].map(language => (
-              <motion.button
-                key={language}
-                className={`block w-full text-left px-2 py-1 text-sm hover:bg-gray-100 ${selectedLanguage === language ? 'text-indigo-600' : ''}`}
-                onClick={() => {
-                  setSelectedLanguage(language);
-                  setIsDropdownOpen(false);
-                }}
-                whileHover={{ x: 5 }}
-                transition={{ type: 'spring', stiffness: 300 }}
+        <div className="flex items-center justify-between">
+          <div className="relative">
+            <motion.button 
+              className="flex items-center space-x-1 text-sm"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FiGlobe className="text-gray-600" />
+              <span>{selectedLanguage} | {selectedCurrency}</span>
+              <motion.span
+                animate={{ rotate: isDropdownOpen ? 180 : 0 }}
+                transition={{ duration: 0.2 }}
               >
-                {language}
-              </motion.button>
-            ))}
+                <FiChevronDown className="text-gray-500" />
+              </motion.span>
+            </motion.button>
+            
+            <AnimatePresence>
+              {isDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute bg-white shadow-lg rounded-md mt-1 py-1 w-64 z-20 max-h-96 overflow-y-auto"
+                >
+                  <div className="border-b border-gray-100 px-4 py-2">
+                    <h5 className="text-xs font-bold text-gray-500 uppercase">Language</h5>
+                    {['English', 'Spanish', 'French', 'German', 'Chinese', 'Japanese', 'Arabic', 'Russian'].map(language => (
+                      <motion.button
+                        key={language}
+                        className={`block w-full text-left px-2 py-1 text-sm hover:bg-gray-100 ${selectedLanguage === language ? 'text-indigo-600' : ''}`}
+                        onClick={() => {
+                          setSelectedLanguage(language);
+                          setIsDropdownOpen(false);
+                        }}
+                        whileHover={{ x: 5 }}
+                        transition={{ type: 'spring', stiffness: 300 }}
+                      >
+                        {language}
+                      </motion.button>
+                    ))}
+                  </div>
+                  <div className="border-b border-gray-100 px-4 py-2">
+                    <h5 className="text-xs font-bold text-gray-500 uppercase">Currency</h5>
+                    {['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CNY', 'INR'].map(currency => (
+                      <motion.button
+                        key={currency}
+                        className={`block w-full text-left px-2 py-1 text-sm hover:bg-gray-100 ${selectedCurrency === currency ? 'text-indigo-600' : ''}`}
+                        onClick={() => {
+                          setSelectedCurrency(currency);
+                          setIsDropdownOpen(false);
+                        }}
+                        whileHover={{ x: 5 }}
+                        transition={{ type: 'spring', stiffness: 300 }}
+                      >
+                        {currency}
+                      </motion.button>
+                    ))}
+                  </div>
+                  <div className="px-4 py-2">
+                    <h5 className="text-xs font-bold text-gray-500 uppercase">Country</h5>
+                    {['USA', 'Canada', 'UK', 'France', 'Germany', 'Spain', 'Italy', 'Australia'].map(country => (
+                      <motion.button
+                        key={country}
+                        className="block w-full text-left px-2 py-1 text-sm hover:bg-gray-100"
+                        onClick={() => {
+                          // Add your country selection logic here if needed
+                          setIsDropdownOpen(false);
+                        }}
+                        whileHover={{ x: 5 }}
+                        transition={{ type: 'spring', stiffness: 300 }}
+                      >
+                        {country}
+                      </motion.button>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-          <div className="border-b border-gray-100 px-4 py-2">
-            <h5 className="text-xs font-bold text-gray-500 uppercase">Currency</h5>
-            {['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CNY', 'INR'].map(currency => (
-              <motion.button
-                key={currency}
-                className={`block w-full text-left px-2 py-1 text-sm hover:bg-gray-100 ${selectedCurrency === currency ? 'text-indigo-600' : ''}`}
-                onClick={() => {
-                  setSelectedCurrency(currency);
-                  setIsDropdownOpen(false);
-                }}
-                whileHover={{ x: 5 }}
-                transition={{ type: 'spring', stiffness: 300 }}
+          
+          {/* Categories - Hidden on mobile */}
+          <nav className="hidden md:flex space-x-6 overflow-x-auto py-1">
+            {['Electronics', 'Clothing', 'Home', 'Beauty', 'Sports', 'Toys', 'Books', 'Health'].map((category, index) => (
+              <motion.a
+                key={category}
+                href="#"
+                className="whitespace-nowrap text-sm font-medium hover:text-indigo-600"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 * index }}
               >
-                {currency}
-              </motion.button>
+                {category}
+              </motion.a>
             ))}
-          </div>
-          <div className="px-4 py-2">
-            <h5 className="text-xs font-bold text-gray-500 uppercase">Country</h5>
-            {['USA', 'Canada', 'UK', 'France', 'Germany', 'Spain', 'Italy', 'Australia'].map(country => (
-              <motion.button
-                key={country}
-                className="block w-full text-left px-2 py-1 text-sm hover:bg-gray-100"
-                onClick={() => {
-                  // Add your country selection logic here if needed
-                  setIsDropdownOpen(false);
-                }}
-                whileHover={{ x: 5 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-              >
-                {country}
-              </motion.button>
-            ))}
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  </div>
-  
-  {/* Categories - Hidden on mobile */}
-  <nav className="hidden md:flex space-x-6 overflow-x-auto py-1">
-    {['Electronics', 'Clothing', 'Home', 'Beauty', 'Sports', 'Toys', 'Books', 'Health'].map((category, index) => (
-      <motion.a
-        key={category}
-        href="#"
-        className="whitespace-nowrap text-sm font-medium hover:text-indigo-600"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.1 * index }}
-      >
-        {category}
-      </motion.a>
-    ))}
-  </nav>
-  
-  {/* Mobile Menu Button */}
-  <button 
-    className="md:hidden text-sm font-medium flex items-center"
-    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-  >
-    Categories <FiChevronDown className="ml-1" />
-  </button>
-</div>
+          </nav>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-sm font-medium flex items-center"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            Categories <FiChevronDown className="ml-1" />
+          </button>
+        </div>
         </div>
         
         {/* Mobile Menu */}
@@ -377,7 +376,6 @@ const EcommerceHomepage = () => {
 
       {/* Main Content */}
       <main className="flex-grow container mx-auto px-4 py-6">
-        {/* Mobile Filters Button - Only visible on mobile */}
         <button 
           className="md:hidden flex items-center justify-center w-full bg-indigo-600 text-white py-2 rounded-lg mb-4"
           onClick={() => setMobileFiltersOpen(true)}
